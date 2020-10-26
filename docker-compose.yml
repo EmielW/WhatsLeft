@@ -1,0 +1,14 @@
+version: '3.2'
+
+services:
+    mariadb:
+        image: mariadb
+        ports:
+            - 3306:3306
+        environment:
+            - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+        volumes:
+            - betty_mariadb_vol:/var/lib/mysql
+
+volumes:
+    betty_mariadb_vol:
